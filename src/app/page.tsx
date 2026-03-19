@@ -79,9 +79,14 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-        <div className="glass aspect-[4/5] p-1 shadow-2xl rounded-sm">
-          <div className="w-full h-full bg-[#131313] flex items-center justify-center">
-            <span className="serif text-champagne/20 text-xl italic">[ System Interface Preview ]</span>
+        <div className="glass aspect-[4/5] p-1 shadow-2xl rounded-sm overflow-hidden">
+          <div className="w-full h-full bg-[#131313] flex items-center justify-center relative">
+            <img 
+              src="/assets/interface-preview.png" 
+              alt="Nexus Nova Engine Interface" 
+              className="w-full h-full object-cover opacity-80 hover:scale-110 transition-transform duration-[10s]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </div>
         </div>
       </section>
