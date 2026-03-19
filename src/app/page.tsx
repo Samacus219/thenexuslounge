@@ -19,21 +19,30 @@ export default function HomePage() {
 
       {/* 🏙️ HERO: The Sentient Curation */}
       <section className="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-40">
-           {/* Placeholder for high-end cinematic video or image */}
-           <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--charcoal)_0%,_#000000_100%)]"></div>
+        {/* 🎬 THE CINEMATIC BACKDROP */}
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-[20s] hover:scale-110"
+          style={{ backgroundImage: "url('/assets/hero-bg.png')" }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/90" />
         </div>
         
         <div className="relative z-10 space-y-12 max-w-4xl">
-          <h1 className="serif text-5xl md:text-8xl leading-tight">
-            The Pre-eminent <br/> 
-            <span className="text-champagne italic">Social Concierge</span>
+          <div className="mb-6 flex justify-center">
+             <div className="h-16 w-16 border border-champagne/40 rotate-45 flex items-center justify-center p-2 mb-4 champagne-glow animate-breathe">
+                <span className="text-champagne -rotate-45 text-xl font-light tracking-widest">N</span>
+             </div>
+          </div>
+
+          <h1 className="serif text-5xl md:text-8xl leading-none text-shadow-gold">
+            The <span className="text-champagne italic">Project</span> <br/>
+            of Foresight.
           </h1>
-          <p className="text-lg md:text-xl font-light text-white/50 max-w-2xl mx-auto leading-relaxed">
-            Coordinating luxury retreats, group dining, and elite transit through effortless delegation and sentient curation.
+          <p className="text-sm md:text-base font-light text-white/50 max-w-xl mx-auto leading-relaxed tracking-[0.3em] uppercase">
+            Coordinating elite retreats through sentient delegation.
           </p>
           
-          <div className="pt-12 w-full max-w-md mx-auto">
+          <div className="pt-8 w-full max-w-sm mx-auto">
              <WaitlistForm />
           </div>
         </div>

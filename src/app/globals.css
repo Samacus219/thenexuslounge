@@ -38,5 +38,9 @@ h1, h2, h3, .serif {
 }
 
 .animate-breathe {
-  animation: breathe 3s ease-in-out infinite;
+  animation: breathe 8s ease-in-out infinite;
+}
+
+.text-shadow-gold {
+  text-shadow: 0 0 20px rgba(247, 231, 206, 0.3);
 }
