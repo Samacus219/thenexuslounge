@@ -59,8 +59,15 @@ export default function LoungePage() {
                initial={{ opacity: 0, scale: 0.95 }}
                whileInView={{ opacity: 1, scale: 1 }}
                transition={{ delay: i * 0.2 }}
-               className="glass p-12 space-y-8 hover:border-champagne/40 transition-all text-center"
+               className="glass p-12 space-y-8 hover:border-champagne/40 transition-all text-center group"
              >
+                <div className="h-48 overflow-hidden rounded-sm mb-8 glass p-1">
+                   <img 
+                     src={i === 0 ? "/assets/mobile-onboarding.png" : i === 1 ? "/assets/mobile-vault.png" : "/assets/mobile-circle-monitoring.png"} 
+                     alt={item.name} 
+                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100"
+                   />
+                </div>
                 <div className="space-y-4">
                    <h2 className="serif text-3xl text-champagne">{item.name}</h2>
                 </div>
