@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import WaitlistForm from '@/components/WaitlistForm';
@@ -41,6 +42,9 @@ export default function HomePage() {
              </div>
           </div>
 
+          <p className="text-champagne/80 italic serif text-2xl">
+            &quot;The most precious luxury isn&apos;t the destination; it&apos;s the peace of mind of your group.&quot;
+          </p>
           <h1 className="serif text-5xl md:text-8xl leading-none text-shadow-gold">
             The <span className="text-champagne italic">Project</span> <br/>
             of Foresight.
