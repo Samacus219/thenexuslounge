@@ -6,15 +6,29 @@ export default function HomePage() {
     <main className="min-h-screen luxury-gradient selection:bg-champagne/30 text-white">
       {/* 🚀 NAV */}
       <nav className="fixed top-0 w-full z-50 glass px-8 py-6 flex justify-between items-center">
-        <div className="serif text-2xl tracking-[0.4em] text-champagne">N E X U S</div>
+        <div className="flex items-center space-x-4">
+          <div className="serif text-2xl tracking-[0.4em] text-champagne">N E X U S</div>
+        </div>
+        
         <div className="hidden md:flex space-x-12 text-sm tracking-widest uppercase text-white/60">
           <Link href="#service" className="hover:text-champagne transition-colors">Service</Link>
           <Link href="#methodology" className="hover:text-champagne transition-colors">Methodology</Link>
           <Link href="#partners" className="hover:text-champagne transition-colors">Partners</Link>
         </div>
-        <Link href="/download" className="border border-champagne/40 px-6 py-2 text-xs tracking-[0.2em] uppercase text-champagne hover:bg-champagne hover:text-black transition-all">
-          Request Access
-        </Link>
+
+        <div className="flex items-center space-x-8">
+          <Link href="/download" className="border border-champagne/40 px-6 py-2 text-xs tracking-[0.2em] uppercase text-champagne hover:bg-champagne hover:text-black transition-all">
+            Request Access
+          </Link>
+          {/* 💎 THE TOP-RIGHT DIAMOND LOGO */}
+          <div className="relative h-10 w-10">
+            <img 
+              src="/assets/diamond-logo.png" 
+              alt="Nexus Diamond" 
+              className="w-full h-full object-contain animate-breathe"
+            />
+          </div>
+        </div>
       </nav>
 
       {/* 🏙️ HERO: The Sentient Curation */}
@@ -30,7 +44,7 @@ export default function HomePage() {
         <div className="relative z-10 space-y-12 max-w-4xl">
           <div className="mb-6 flex justify-center">
              <div className="h-16 w-16 border border-champagne/40 rotate-45 flex items-center justify-center p-2 mb-4 champagne-glow animate-breathe">
-                <span className="text-champagne -rotate-45 text-xl font-light tracking-widest">N</span>
+                <span className="text-champagne -rotate-45 text-2xl font-light tracking-widest">N</span>
              </div>
           </div>
 
