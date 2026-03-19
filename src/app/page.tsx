@@ -12,6 +12,7 @@ export default function HomePage() {
           <Link href="/" className="serif text-2xl tracking-[0.4em] text-champagne">N E X U S</Link>
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/transit" className="text-[10px] tracking-widest text-white/50 hover:text-white transition-all uppercase">Transit</Link>
+            <Link href="/dining" className="text-[10px] tracking-widest text-white/50 hover:text-white transition-all uppercase">Dining</Link>
             <Link href="/service" className="text-[10px] tracking-widest text-white/50 hover:text-white transition-all uppercase">Lounge</Link>
             <Link href="/methodology" className="text-[10px] tracking-widest text-white/50 hover:text-white transition-all uppercase">Intelligence</Link>
             <Link href="/partners" className="text-[10px] tracking-widest text-white/50 hover:text-white transition-all uppercase">Partners</Link>
