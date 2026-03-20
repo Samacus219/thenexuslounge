@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 export default function TravelPage() {
   const journeys = [
-    { name: "Private Wings", cat: "Aviation", desc: "Access the world's most exclusive private jet network. From Gulfstreams to Global Expresses, Nova curates the flight path so you can focus on the destination." },
-    { name: "Ocean Escapes", cat: "Maritime", desc: "Private superyacht charters in the Mediterranean and the Caribbean. Fully serviced, fully provisioned, and ready for your circle." },
-    { name: "The Grand Vista", cat: "Luxury Land", desc: "A bespoke journey through the most remote and beautiful landscapes on Earth. 24/7 Guardian monitoring included." }
+    { name: "Private Wings", cat: "Global Aviation", desc: "Access to the world's finest fleet. Direct booking for private jets and helicopters, with Nova handling the logistics and gate access." },
+    { name: "First-Class Sentient", cat: "Elite Commercial", desc: "The highest-tier commercial experience. 1st-class seat optimization and automated chauffeur-to-gate synchronization." },
+    { name: "Nautical Pursuit", cat: "Private Charters", desc: "Private yacht charters from the Amalfi Coast to the Caribbean. Fully staffed and fully integrated into the Nexus social loop." }
   ];
 
   return (
@@ -17,77 +17,78 @@ export default function TravelPage() {
         <Link href="/" className="text-xs uppercase tracking-widest text-white/50 hover:text-white transition-colors">Return</Link>
       </nav>
 
-      <section className="pt-48 pb-20 px-8 max-w-7xl mx-auto space-y-24">
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 1 }}
-           className="max-w-4xl space-y-8"
-        >
-          <div className="text-xs uppercase tracking-[0.5em] text-champagne">Unfettered Exploration</div>
-          <h1 className="serif text-6xl md:text-8xl italic text-shadow-gold">Elite <br/> <span className="not-italic">Expeditions</span></h1>
-          <p className="text-xl md:text-2xl font-light text-white/50 leading-relaxed max-w-2xl">
-            Nexus Travel replaces the word &quot;Booking&quot; with &quot;Curation&quot;. No portals, no logins, no friction. 
-            Just drop your destination into the Lounge and let Nova architect the journey.
-          </p>
-        </motion.div>
-
-        {/* ✈️ CINEMATIC PRIVATE JET SOCIAL BACKDROP */}
-        <div className="relative h-[650px] w-full glass rounded-sm overflow-hidden p-1 shadow-2xl group">
+      {/* 🛫 HERO: Global Trajectory */}
+      <section className="relative h-[80vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden pt-20">
+        <div className="absolute inset-x-4 inset-y-20 z-0 glass border border-white/5 rounded-2xl overflow-hidden shadow-2xl">
            <img 
-              src="/assets/travel-bg.png" 
-              alt="Elite Social Travel Experience" 
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[25s]"
+              src="/assets/travel-hero-sharp.png" 
+              alt="Elite Aviation Experience" 
+              className="w-full h-full object-cover brightness-75 hover:scale-105 transition-transform duration-[20s]" 
            />
-           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/10" />
-           <div className="absolute top-12 left-12 flex items-center space-x-6">
-              <div className="h-3 w-3 bg-champagne rounded-full animate-ping" />
-              <div className="serif text-white/80 text-xl md:text-2xl italic tracking-widest text-shadow-gold text-right uppercase">Private Flight Consensus Shared</div>
-           </div>
-           <div className="absolute bottom-12 left-12 max-w-md bg-black/40 backdrop-blur-md p-8 border-l-4 border-champagne">
-              <p className="text-white/90 font-light leading-relaxed italic text-lg">
-                &quot;The finest journeys are shared without the burden of logistics.&quot;
-              </p>
-           </div>
+           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+        </div>
+        
+        <motion.div 
+           initial={{ opacity: 0, y: 30 }}
+           animate={{ opacity: 1, y: 0 }}
+           className="relative z-10 space-y-6 max-w-4xl pt-40"
+        >
+           <div className="text-[10px] tracking-[1em] text-champagne uppercase font-bold italic">Private Aviation & Pursuit</div>
+           <h1 className="serif text-6xl md:text-9xl italic leading-tight text-shadow-gold italic">Global <br/> <span className="not-italic font-bold">Travel</span></h1>
+        </motion.div>
+      </section>
+
+      {/* 🛣️ SECTION: TRAVEL TRAJECTORY (THE UI PREVIEW) */}
+      <section className="py-48 px-8 max-w-7xl mx-auto space-y-48">
+        <div className="flex flex-col lg:flex-row gap-24 items-center">
+            <motion.div 
+               initial={{ opacity: 0, scale: 0.95 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               className="lg:w-1/2"
+            >
+               <div className="glass p-1 rounded-2xl shadow-2xl relative border border-white/10 group overflow-hidden shadow-gold">
+                  <img src="/assets/travel-ui-sharp.png" alt="Trajectory Dashboard UI" className="rounded-xl w-full h-full object-cover group-hover:scale-105 transition-transform duration-[12s]" />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-transparent to-transparent h-1/3" />
+                  <div className="absolute bottom-12 left-12 serif text-white/90 text-2xl italic tracking-widest text-shadow-gold font-bold italic">Trajectory Sentient v1.0</div>
+               </div>
+            </motion.div>
+            <div className="lg:w-1/2 space-y-12">
+               <div className="text-xs uppercase tracking-[0.5em] text-champagne font-bold italic">The Sentient Trajectory</div>
+               <h2 className="serif text-5xl md:text-8xl leading-tight text-shadow-gold">Path <br/> <span className="italic italic leading-tight">Infinite</span></h2>
+               <p className="text-xl font-light text-white/50 leading-relaxed max-w-xl italic border-l-2 border-champagne pl-6">
+                 &quot;Luxury is not the flight; it is the time returned to you.&quot;
+               </p>
+               <p className="text-xl font-light text-white/50 leading-relaxed max-w-xl">
+                 Nexus manages the friction of global movement. Nova monitors weather patterns, 
+                 airspace congestion, and real-time gate changes. She provides 
+                 **Sentinel Alerts** for in-flight catering consensus and group share splits 
+                 before the jets leave the tarmac.
+               </p>
+               <div className="flex items-center space-x-6 text-[10px] tracking-[0.4em] uppercase text-champagne bg-black/40 p-6 border-l-4 border-champagne">
+                  <div className="h-2 w-2 bg-champagne rounded-full animate-ping" />
+                  <span>Sentinel Over-watch active for London/New York</span>
+               </div>
+            </div>
         </div>
 
-        {/* 🛳️ JOURNEY GRID */}
-        <div className="grid md:grid-cols-3 gap-12 py-20 border-t border-white/5 px-4 md:px-0">
+        {/* ✈️ TRAVEL TIER GRID */}
+        <div className="grid md:grid-cols-3 gap-12 py-20 border-t border-white/5">
            {journeys.map((item, i) => (
              <motion.div
                key={item.name}
                initial={{ opacity: 0, y: 40 }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ delay: i * 0.2 }}
-               className="glass p-12 space-y-8 hover:border-champagne/40 transition-all group relative overflow-hidden"
+               className="glass p-12 space-y-8 hover:border-champagne/40 transition-all transition-duration-700 group relative overflow-hidden"
              >
-                <div className="absolute -right-8 -bottom-8 opacity-5 font-serif text-8xl italic champagne-glow">0{i+1}</div>
+                <div className="absolute -right-8 -bottom-8 opacity-5 font-serif text-8xl italic champagne-glow">TRAVEL</div>
                 <div className="space-y-4">
-                   <div className="text-[10px] tracking-[0.5em] text-champagne uppercase font-bold">{item.cat}</div>
+                   <div className="text-[10px] tracking-[0.5em] text-champagne uppercase font-bold italic">{item.cat}</div>
                    <h2 className="serif text-3xl text-white/95">{item.name}</h2>
                 </div>
-                <p className="text-white/40 font-light leading-relaxed text-sm">{item.desc}</p>
+                <p className="text-white/40 font-light leading-relaxed text-sm italic">{item.desc}</p>
              </motion.div>
            ))}
-        </div>
-
-        {/* 🗺️ THE "AGENTIC" TRAVEL PROMISE */}
-        <div className="flex flex-col lg:flex-row gap-24 items-center py-20 bg-black/50 p-12 lg:p-24 rounded-sm border border-white/5 shadow-inner">
-           <div className="lg:w-1/2 space-y-12">
-              <h3 className="serif text-4xl italic">Agentic Expeditions</h3>
-              <p className="text-white/40 max-w-xl font-light leading-loose text-lg">
-                Nexus doesn&apos;t just book a jet; we build an end-to-end corridor of peace. 
-                Your limousine is synchronized to the flight arrival, your favorite champagne 
-                is already at the villa, and the Guardian monitoring has already 
-                vetted the hospital and embassy locations at your destination.
-              </p>
-           </div>
-           <div className="lg:w-1/2 relative group">
-              <div className="absolute -inset-8 bg-champagne/5 blur-[80px] rounded-full" />
-              <div className="glass p-1 rounded-sm shadow-2xl relative translate-y-[-20px] lg:translate-y-0 shadow-gold group-hover:scale-105 transition-transform duration-700">
-                <img src="/assets/mobile-archive.png" alt="Travel Archive Preview" className="rounded-sm" />
-              </div>
-           </div>
         </div>
       </section>
     </main>
