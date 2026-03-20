@@ -83,7 +83,7 @@ export default function HomePage() {
                  className="space-y-8"
                >
                   <div className="glass p-1 rounded-2xl rotate-[-5deg] shadow-2xl">
-                    <img src="/assets/circle-men.png" alt="Men's Social Circle" className="rounded-xl" />
+                    <img src="/assets/circle-men-sharp.png" alt="Men's Social Circle" className="rounded-xl" />
                   </div>
                   <div className="glass p-1 rounded-2xl rotate-[3deg] shadow-2xl">
                     <img src="/assets/mobile-onboarding.png" alt="Lounge Entry" className="rounded-xl" />
@@ -95,7 +95,7 @@ export default function HomePage() {
                  className="space-y-8 pt-20"
                >
                   <div className="glass p-1 rounded-2xl rotate-[5deg] shadow-2xl">
-                    <img src="/assets/circle-women.png" alt="Women's Social Circle" className="rounded-xl" />
+                    <img src="/assets/circle-women-sharp.png" alt="Women's Social Circle" className="rounded-xl" />
                   </div>
                   <div className="glass p-1 rounded-2xl rotate-[-3deg] shadow-2xl">
                     <img src="/assets/mobile-transit.png" alt="Transit Alert" className="rounded-xl" />
