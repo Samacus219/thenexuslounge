@@ -3,22 +3,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function MethodologyPage() {
-  const steps = [
-    {
-       step: "01",
-       title: "Semantic Intake",
-       description: "We don't just process text; we interpret the social intent. Nova considers the mood, the group size, and the unspoken standards of your circle."
-    },
-    {
-       step: "02",
-       title: "The Consensus Engine",
-       description: "Instead of back-and-forth messaging, Nova generates a unified 'Consensus Map'. One vote, and the path is rendered."
-    },
-    {
-       step: "03",
-       title: "Guardian Monitoring",
-       description: "Real-time edge telemetry. Flight delays, traffic swells, even weather shifts in Tokyo are monitored to ensure your transit is never interrupted."
-    }
+  const pillars = [
+    { name: "Sentiment Triage", cat: "Agentic Logic", desc: "Nova doesn't just process commands; she monitors group sentiment. By analyzing the 'Drop Box' flow, she identifies the unspoken consensus for luxury and fun." },
+    { name: "Predictive Logistics", cat: "Sentinel Over-watch", desc: "Our engine synchronizes with global flight telemetry, weather patterns, and traffic flow. We predict a 2-hour delay before the airline even announces it." },
+    { name: "The Vault Protocol", cat: "Biometric Security", desc: "Your identity is a sovereign asset. Nexus uses Tier-1 AES-256 encryption and biometric second-factor authorization for every fiscal handshake." }
   ];
 
   return (
@@ -29,65 +17,78 @@ export default function MethodologyPage() {
         <Link href="/" className="text-xs uppercase tracking-widest text-white/50 hover:text-white transition-colors">Return</Link>
       </nav>
 
-      <section className="pt-48 pb-20 px-8 max-w-7xl mx-auto space-y-24">
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 1 }}
-           className="max-w-4xl space-y-8"
-        >
-          <div className="text-xs uppercase tracking-[0.5em] text-champagne">Nova Engine Architecture</div>
-          <h1 className="serif text-6xl md:text-8xl">The Methodology of <br/> <span className="italic">Foresight</span></h1>
-          <p className="text-xl md:text-2xl font-light text-white/50 leading-relaxed max-w-2xl">
-            Nexus operates on a system of anticipatory curation. We have weaponized time by removing the friction of planning, 
-            replacing it with the elegance of autonomous execution.
-          </p>
-        </motion.div>
-
-        {/* 🧠 THE "STITCHED" AI BACKDROP */}
-        <div className="relative h-[600px] w-full glass rounded-sm overflow-hidden p-1 shadow-2xl">
+      {/* 📊 HERO: The Sentient Architecture */}
+      <section className="relative h-[80vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden pt-20">
+        <div className="absolute inset-x-4 inset-y-20 z-0 glass border border-white/5 rounded-2xl overflow-hidden shadow-2xl">
            <img 
-              src="/assets/nova-bg.png" 
-              alt="Nova Sentient Architecture" 
-              className="w-full h-full object-cover opacity-60 hover:scale-105 transition-transform duration-[20s]"
+              src="/assets/intel-hero-sharp.png" 
+              alt="Elite Data Architecture" 
+              className="w-full h-full object-cover brightness-75 hover:scale-105 transition-transform duration-[20s]" 
            />
-           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
-           <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center space-y-4">
-                 <div className="serif text-champagne text-4xl italic text-shadow-gold">SENTIENT ENGINE v1.0</div>
-                 <div className="text-[10px] tracking-[0.5em] text-white/40 uppercase">A Gaia-Class Intelligence Layer</div>
-              </div>
-           </div>
+           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+        </div>
+        
+        <motion.div 
+           initial={{ opacity: 0, y: 30 }}
+           animate={{ opacity: 1, y: 0 }}
+           className="relative z-10 space-y-6 max-w-4xl pt-40"
+        >
+           <div className="text-[10px] tracking-[1em] text-champagne uppercase font-bold italic">The Sentient Architecture</div>
+           <h1 className="serif text-6xl md:text-9xl italic leading-tight text-shadow-gold">Nexus <br/> <span className="not-italic font-bold">Intel</span></h1>
+        </motion.div>
+      </section>
+
+      {/* 🧠 SECTION: METHODOLOGY (THE BRAIN PREVIEW) */}
+      <section className="py-48 px-8 max-w-7xl mx-auto space-y-48">
+        <div className="flex flex-col lg:flex-row gap-24 items-center">
+            <motion.div 
+               initial={{ opacity: 0, scale: 0.95 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               className="lg:w-1/2"
+            >
+               <div className="glass p-1 rounded-2xl shadow-2xl relative border border-white/10 group overflow-hidden shadow-gold">
+                  <img src="/assets/intel-ui-sharp.png" alt="Intelligence Brain Dashboard" className="rounded-xl w-full h-full object-cover group-hover:scale-110 transition-transform duration-[15s]" />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-transparent to-transparent h-1/3" />
+                  <div className="absolute bottom-12 left-12 serif text-white/90 text-2xl italic tracking-widest text-shadow-gold font-bold italic italic">Sentiment Brain v3.0</div>
+               </div>
+            </motion.div>
+            <div className="lg:w-1/2 space-y-12">
+               <div className="text-xs uppercase tracking-[0.5em] text-champagne font-bold italic">The Sentient Layer</div>
+               <h2 className="serif text-5xl md:text-8xl leading-tight text-shadow-gold">Social <br/> <span className="italic italic leading-tight">Logic</span></h2>
+               <p className="text-xl font-light text-white/50 leading-relaxed max-w-xl italic border-l-2 border-champagne pl-6">
+                 &quot;To plan is human; to pre-empt is Nexus.&quot;
+               </p>
+               <p className="text-xl font-light text-white/50 leading-relaxed max-w-xl">
+                 Nexus Intelligence is the byproduct of **Sentiment Analysis** and **Global Telemetry**. 
+                 Nova monitors tens of thousands of data points across airlines, weather stations, 
+                 and social venues to provide our members with the clearest path to luxury.
+               </p>
+               <div className="flex items-center space-x-6 text-[10px] tracking-[0.4em] uppercase text-champagne bg-black/40 p-6 border-l-4 border-champagne">
+                  <div className="h-2 w-2 bg-champagne rounded-full animate-ping" />
+                  <span>Real-time Sentiment Triage active globally</span>
+               </div>
+            </div>
         </div>
 
-        {/* 🛠️ PROCESS GRID */}
-        <div className="grid md:grid-cols-3 gap-20 py-24">
-           {steps.map((item, i) => (
+        {/* 🏛️ INTEL PILLAR GRID */}
+        <div className="grid md:grid-cols-3 gap-12 py-20 border-t border-white/5">
+           {pillars.map((item, i) => (
              <motion.div
-               key={item.step}
-               initial={{ opacity: 0, x: -20 }}
-               animate={{ opacity: 1, x: 0 }}
-               transition={{ delay: i * 0.3, duration: 1 }}
-               className="space-y-8"
+               key={item.name}
+               initial={{ opacity: 0, y: 40 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ delay: i * 0.2 }}
+               className="glass p-12 space-y-8 hover:border-champagne/40 transition-all transition-duration-700 group relative overflow-hidden"
              >
-                <div className="serif text-5xl text-champagne/10">{item.step}</div>
-                <h2 className="serif text-3xl text-champagne">{item.title}</h2>
-                <p className="text-white/40 font-light leading-relaxed">{item.description}</p>
+                <div className="absolute -right-8 -bottom-8 opacity-5 font-serif text-8xl italic champagne-glow">INTEL</div>
+                <div className="space-y-4">
+                   <div className="text-[10px] tracking-[0.5em] text-champagne uppercase font-bold italic">{item.cat}</div>
+                   <h2 className="serif text-3xl text-white/95">{item.name}</h2>
+                </div>
+                <p className="text-white/40 font-light leading-relaxed text-sm italic">{item.desc}</p>
              </motion.div>
            ))}
         </div>
-      </section>
-
-      {/* 🤝 PARTNER SECTION: THE CONDUIT */}
-      <section className="bg-black py-48 border-t border-white/5">
-         <div className="max-w-4xl mx-auto text-center px-8 space-y-16">
-            <h3 className="serif text-4xl">Technological Conduits</h3>
-            <p className="font-light text-white/50 leading-loose text-lg">
-               Nexus does not compete with global hospitality brands; we enhance them. 
-               By acting as a tech-enabled conduit for the Agoda, Expedia, and Blacklane networks, 
-               we provide the digital intelligence that transforms a simple booking into an elite experience.
-            </p>
-         </div>
       </section>
     </main>
   );
