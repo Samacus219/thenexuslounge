@@ -78,18 +78,28 @@ export default function HomePage() {
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-8 relative">
                <motion.div 
-                 initial={{ opacity: 0, x: -20 }}
-                 whileInView={{ opacity: 1, x: 0 }}
-                 className="glass p-1 rounded-2xl rotate-[-5deg] shadow-2xl"
+                 initial={{ opacity: 0, scale: 0.9 }}
+                 whileInView={{ opacity: 1, scale: 1 }}
+                 className="space-y-8"
                >
-                 <img src="/assets/mobile-onboarding.png" alt="Onboarding" className="rounded-xl" />
+                  <div className="glass p-1 rounded-2xl rotate-[-5deg] shadow-2xl">
+                    <img src="/assets/circle-men.png" alt="Men's Social Circle" className="rounded-xl" />
+                  </div>
+                  <div className="glass p-1 rounded-2xl rotate-[3deg] shadow-2xl">
+                    <img src="/assets/mobile-onboarding.png" alt="Lounge Entry" className="rounded-xl" />
+                  </div>
                </motion.div>
                <motion.div 
-                 initial={{ opacity: 0, x: 20 }}
-                 whileInView={{ opacity: 1, x: 0 }}
-                 className="glass p-1 rounded-2xl rotate-[5deg] mt-20 shadow-2xl"
+                 initial={{ opacity: 0, scale: 0.9 }}
+                 whileInView={{ opacity: 1, scale: 1 }}
+                 className="space-y-8 pt-20"
                >
-                 <img src="/assets/mobile-transit.png" alt="Transit Alert" className="rounded-xl" />
+                  <div className="glass p-1 rounded-2xl rotate-[5deg] shadow-2xl">
+                    <img src="/assets/circle-women.png" alt="Women's Social Circle" className="rounded-xl" />
+                  </div>
+                  <div className="glass p-1 rounded-2xl rotate-[-3deg] shadow-2xl">
+                    <img src="/assets/mobile-transit.png" alt="Transit Alert" className="rounded-xl" />
+                  </div>
                </motion.div>
             </div>
         </div>
