@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 export default function DiningPage() {
   const experiences = [
-    { name: "Omakase Masterclass", loc: "Ginza, Tokyo", desc: "A 22-course journey through the deepest traditions of Edomae sushi. Nova handles the 6-month waitlist for your circle." },
-    { name: "Rooftop Resonance", loc: "Bangkok", desc: "Private access to the city's most exclusive skyline lounges. Table consensus reached and secured before you arrive." },
-    { name: "Alpine Gastronomy", loc: "Courchevel", desc: "Michelin-starred dining in the heart of the Trois Vallées. Chauffeur synchronization included." }
+    { name: "Omakase Masterclass", loc: "Ginza, Tokyo", desc: "A 22-course journey through the deepest traditions of sushi, secured via our exclusive Ginza relationship network." },
+    { name: "Rooftop Resonance", loc: "Bangkok, Thailand", desc: "Private sunset tables at the world's most exclusive skyline lounges, synchronized with your arrival time via the Guardian." },
+    { name: "Alpine Gastronomy", loc: "Courchevel, France", desc: "Michelin-starred dining on the slopes, with private chauffeur and equipment handling managed by Nova." }
   ];
 
   return (
@@ -17,62 +17,71 @@ export default function DiningPage() {
         <Link href="/" className="text-xs uppercase tracking-widest text-white/50 hover:text-white transition-colors">Return</Link>
       </nav>
 
-      <section className="pt-48 pb-20 px-8 max-w-7xl mx-auto space-y-24">
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 1 }}
-           className="max-w-4xl space-y-8"
-        >
-          <div className="text-xs uppercase tracking-[0.5em] text-champagne">Elite Gastronomy</div>
-          <h1 className="serif text-6xl md:text-8xl italic">Curation of <br/> <span className="not-italic">Taste</span></h1>
-          <p className="text-xl md:text-2xl font-light text-white/50 leading-relaxed max-w-2xl">
-            Nexus Dining isn&apos;t just about food; it&apos;s about access. Nova weaponizes our network of concierges 
-            to secure tables that don&apos;t officially exist on public apps.
-          </p>
-        </motion.div>
-
-        {/* 🍱 CINEMATIC DINING BACKDROP */}
-        <div className="relative h-[500px] w-full glass rounded-sm overflow-hidden p-1 shadow-2xl">
+      {/* 🍣 HERO: Gastronomy Pursuit */}
+      <section className="relative h-[80vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden pt-20">
+        <div className="absolute inset-x-4 inset-y-20 z-0 glass border border-white/5 rounded-2xl overflow-hidden shadow-2xl">
            <img 
-              src="/assets/dining-bg.png" 
-              alt="Exclusive Omakase Experience" 
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[20s]"
+              src="/assets/dining-hero-sharp.png" 
+              alt="Elite Omakase Experience" 
+              className="w-full h-full object-cover brightness-75 hover:scale-105 transition-transform duration-[20s]" 
            />
-           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/10" />
-           <div className="absolute bottom-12 right-12 text-right space-y-2">
-              <div className="serif text-white/90 text-2xl md:text-3xl italic tracking-widest text-shadow-gold">OMAKASE GINZA v1.0</div>
-              <div className="text-[10px] tracking-[0.5em] text-champagne uppercase">Secured by Nova Concierge</div>
-           </div>
+           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
         </div>
+        
+        <motion.div 
+           initial={{ opacity: 0, y: 30 }}
+           animate={{ opacity: 1, y: 0 }}
+           className="relative z-10 space-y-6 max-w-4xl pt-40"
+        >
+           <div className="text-[10px] tracking-[1em] text-champagne uppercase font-bold italic">The Elite Table</div>
+           <h1 className="serif text-6xl md:text-9xl italic leading-tight text-shadow-gold">Fine <br/> <span className="not-italic">Dining</span></h1>
+        </motion.div>
+      </section>
 
-        {/* 🍲 CURATION GRID */}
-        <div className="grid md:grid-cols-3 gap-12 py-20 border-t border-white/5">
-           {experiences.map((item, i) => (
+      {/* 🍽️ SECTION: TIERED GASTRONOMY */}
+      <section className="py-48 px-8 max-w-7xl mx-auto space-y-48">
+        <div className="grid md:grid-cols-3 gap-12">
+           {experiences.map((exp, i) => (
              <motion.div
-               key={item.name}
-               initial={{ opacity: 0, y: 30 }}
+               key={exp.name}
+               initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ delay: i * 0.2 }}
-               className="glass p-12 space-y-8 hover:border-champagne/40 transition-all group"
+               className="glass p-12 space-y-8 border border-white/5 group hover:border-champagne/40 transition-all transition-duration-700"
              >
-                <div className="space-y-4">
-                   <div className="text-[10px] tracking-[0.5em] text-champagne uppercase font-bold">{item.loc}</div>
-                   <h2 className="serif text-3xl text-white/95">{item.name}</h2>
-                </div>
-                <p className="text-white/40 font-light leading-relaxed text-sm italic">{item.desc}</p>
+                <div className="text-[10px] tracking-[0.5em] text-champagne uppercase font-bold">0{i+1} • {exp.loc}</div>
+                <h3 className="serif text-3xl">{exp.name}</h3>
+                <p className="text-white/40 font-light leading-relaxed italic">{exp.desc}</p>
              </motion.div>
            ))}
         </div>
 
-        {/* 🥂 THE "RESERVATION" PROMISE */}
-        <div className="bg-black p-20 text-center space-y-12 rounded-sm border border-white/5">
-           <h3 className="serif text-3xl">Beyond the Menu</h3>
-           <p className="text-white/40 max-w-xl mx-auto font-light leading-loose text-lg">
-              Every Nexus dining reservation includes our signature **Consensus Signature** logic. 
-              The group votes on the menu, the budget is split in the Vault, and the table is secured 
-              before you ever leave the lounge.
-           </p>
+        {/* 🤝 SECTION: MENU CONSENSUS (THE UI PREVIEW) */}
+        <div className="flex flex-col lg:flex-row gap-24 items-center">
+            <motion.div 
+               initial={{ opacity: 0, scale: 0.95 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               className="lg:w-1/2"
+            >
+               <div className="glass p-1 rounded-2xl shadow-2xl relative border border-white/10 group overflow-hidden shadow-gold">
+                  <img src="/assets/dining-ui-sharp.png" alt="Consensus Dining UI" className="rounded-xl w-full h-full object-cover group-hover:scale-105 transition-transform duration-[12s]" />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-transparent to-transparent h-1/3" />
+                  <div className="absolute bottom-12 left-12 serif text-white/90 text-2xl italic tracking-widest text-shadow-gold font-bold">Menu Consensus v1.0</div>
+               </div>
+            </motion.div>
+            <div className="lg:w-1/2 space-y-12">
+               <div className="text-xs uppercase tracking-[0.5em] text-champagne font-bold italic">The Sentient Menu</div>
+               <h2 className="serif text-5xl md:text-8xl italic">Taste <br/> <span className="not-italic">Collective</span></h2>
+               <p className="text-xl font-light text-white/50 leading-relaxed max-w-xl">
+                 Nova doesn&apos;t just book the table; she manages the entire experience. 
+                 Your group can vote on the multi-course menu, pre-select the wine pairing 
+                 via the **Consensus UI**, and notify the chef of specific dietary needs before you reach the elevator.
+               </p>
+               <div className="flex items-center space-x-6 text-[10px] tracking-[0.4em] uppercase text-champagne bg-black/40 p-6 border-l-4 border-champagne">
+                  <div className="h-2 w-2 bg-champagne rounded-full animate-ping" />
+                  <span>Real-time Vibe Check active for Tokyo/London</span>
+               </div>
+            </div>
         </div>
       </section>
     </main>
