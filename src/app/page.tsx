@@ -100,23 +100,23 @@ export default function HomePage() {
 
         {/* 🛡️ SECTION: THE GUARDIAN (AGENTIC SERVICE) */}
         <div className="flex flex-col-reverse lg:flex-row gap-24 items-center">
-            <div className="lg:w-1/2 relative">
-               <div className="absolute -inset-10 bg-champagne/5 blur-[100px] rounded-full" />
-               <motion.div 
-                 initial={{ opacity: 0, scale: 0.9 }}
-                 whileInView={{ opacity: 1, scale: 1 }}
-                 className="glass p-2 rounded-3xl relative z-10"
-               >
-                 <img src="/assets/mobile-guardian.png" alt="Guardian Protocol" className="rounded-2xl" />
-               </motion.div>
-            </div>
-            <div className="lg:w-1/2 space-y-12">
+            <motion.div 
+               initial={{ opacity: 0, scale: 0.95 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               className="lg:w-3/5"
+            >
+               <div className="glass p-2 rounded-2xl shadow-2xl relative group overflow-hidden border border-white/10">
+                  <img src="/assets/guardian-protocol-sharp.png" alt="Guardian Protocol Detailed UI" className="rounded-xl w-full h-full object-cover group-hover:scale-105 transition-transform duration-[10s]" />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-transparent to-transparent h-1/4 pointer-events-none" />
+               </div>
+            </motion.div>
+            <div className="lg:w-2/5 space-y-12">
               <div className="text-xs uppercase tracking-[0.5em] text-champagne">Security & Serenity</div>
               <h2 className="serif text-5xl md:text-7xl leading-tight">
                 The <span className="italic">Guardian</span><br /> Protocol
               </h2>
               <p className="text-lg font-light text-white/50 leading-loose">
-                Real-time edge monitoring for your entire circle. Whether it&apos;s Tokyo rain 
+                Real-time edge monitoring for your entire circle. Whether it&apos;s Bangkok rain 
                 adjusting your transit, or biometric-secured document storage in the 
                 Private Vault, we shield your peace of mind.
               </p>
